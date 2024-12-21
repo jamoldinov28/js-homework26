@@ -29,7 +29,7 @@ function createPosts(data) {
             <p>${user.password}</p>
             <p>${user.gender}</p>
             <button data-id=${user.id} name="delete-btn">delete</button>`;
-        WrapperEl.appendChild(divEl);
+        WrapperEl.appendChild(divEl);        
     });
 }
 
@@ -44,7 +44,8 @@ formEl.addEventListener("submit", e => {
         password: formPasswordEl.value,
         gender: genderInput.value, 
     };
-
+    console.log(newPost);
+    
     fetch(`${BASE_URL}/users`, {
         method: "POST",
         headers: {
@@ -57,6 +58,7 @@ formEl.addEventListener("submit", e => {
         })
         .catch(err => console.log(err));
 });
+
 
 WrapperEl.addEventListener("click", e => {
     if (e.target.name === "delete-btn") {
