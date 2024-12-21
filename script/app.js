@@ -3,7 +3,6 @@ const formEl = document.querySelector(".form");
 const formNameEL = document.querySelector(".name");
 const formUsernameEl = document.querySelector(".username");
 const formPasswordEl = document.querySelector(".password");
-const genderEl = document.querySelector(".gender");
 const BASE_URL = "http://localhost:3000";
 
 async function fetchPosts() {
@@ -37,13 +36,13 @@ function createPosts(data) {
 formEl.addEventListener("submit", e => {
     e.preventDefault();
 
-    // const genderInput = document.querySelector('input[name="gender"]:checked');
+    const genderInput = document.querySelector('input[name="gender"]:checked');
 
     let newPost = {
         name: formNameEL.value,
         username: formUsernameEl.value,
         password: formPasswordEl.value,
-        gender: genderEl.value, 
+        gender: genderInput.value, 
     };
 
     fetch(`${BASE_URL}/users`, {
