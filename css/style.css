@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 button, input{
     outline: none;
@@ -14,74 +14,130 @@ button{
 button:active{
     transform: scale(.96);
 }
-body{
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #3b64ca, #a5aab7);
+  font-family: Arial, sans-serif;
+}
+ .iphone {
+  width: 300px;
+  height: 600px;
+  background: #000;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 25px #00000080;
+  position: relative;
+}
+.screen {
+  width: 280px;
+  height: 560px;
+  background: #204452;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+.camera {
+  width: 60px;
+  height: 12px;
+  background: #000;
+  border-radius: 6px;
+  position: absolute;
+  top: 5px;
+}
+.form{
+    margin-top: 500px;
     display: flex;
+    align-items: center;
+    gap: 10px;
 }
-.main{
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 300px 1fr;
+.name{
+  position: relative;
+  outline: none;
+  border: none;
+    width: 270px;
+    height: 35px;
+    padding: 0 40px;
+    border-radius: 18px;
 }
-.sidebar{
-    height: 100vh;
-    position: sticky;
-    top: 0;
-    left: 0;
-    padding: 30px;
-    background: #222;
-    color: #ddd;
+.fa-face-smile{
+  margin-left: 8px;
+  z-index: 10;
+  position: absolute;
+  font-size: 18px;
+  color: gray;
 }
-.name,
-.username,
-.password,
-.btn{
-    width: 100%;
-    height: 40px;
-    margin-top: 12px;
+button{
+  position: absolute;
+  margin-left: 240px;
+  border: none;
+  background: none;
+  color: gray;
+  font-size: 18px;
 }
-.btn{
-    background: #19f819;
-    border-radius: 2px;
-    color: #fff;
-}
-.gender{
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
-h2,p{
-    margin-top: 10px;
-    color: #222;
-}
-.wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 12px;
+.cardd__btn{
+  width: 40px;
+  height: 20px;
+  color: #fff;
+  display: flex;
+  font-size: 10px;
+  margin: 5px auto;
+  border-radius: 5px;
+  align-items: center;
+  background: #393a39;
+  justify-content: center;
 }
 .card{
-    width: 300px;
-    padding: 12px;
-    box-shadow: 0 0 10px #0003;
-    border-radius: 10px;
-    word-break: break-all;
+  color: #fff;
+  margin-top: 30px;
+  margin-left: -250px;
+  align-items: center;
 }
-.form input{
-    margin-bottom: 10px;
+.card__btn{
+  width: 40px;
+  height: 20px;
+  color: #fff;
+  display: flex;
+  font-size: 10px;
+  margin-left: 50px;
+  
+  border-radius: 5px;
+  align-items: center;
+  background: grey;
+  justify-content: center;
+
 }
-.card > button{
-    width: 90px;
-    height: 30px;
-    color: #fff;
-    display: flex;
-    margin: 20px auto;
-    border-radius: 5px;
-    align-items: center;
-    background: #19f819;
-    justify-content: center;
+.card__button{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 }
-button:active{
-    background: #36e736;
+.card__wrapper{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
 }
-.content{
-    padding: 30px;
+.card > p{
+  margin-top: 10px;
+  font-size: 1px;
+  font-weight: 400;
+}
+.card > h5{
+  margin-top: 15px;
+  font-size: 13px;
+  font-weight: 400;
+}
+h2{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 400;
 }

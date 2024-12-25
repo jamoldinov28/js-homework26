@@ -1,11 +1,10 @@
 {
   "users": [
     {
-      "id": "189a",
-      "name": "John ",
-      "username": "doe1213",
-      "password": "1234567",
-      "gender": "Erkak"
+      "id": "26a4",
+      "name": "salom",
+      "createdAt": 1735142272655,
+      "updetedAt": 1735142272655
     }
   ]
 }
